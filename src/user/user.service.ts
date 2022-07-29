@@ -21,9 +21,9 @@ export class UserService {
   }
 
   delete(userId: string) {
-    return this.userModel.deleteOne({userId}).exec();
+    return this.userModel.deleteOne({ userId }).exec();
   }
-  update(userDto: UserDto,  userId: string) {
-    return  this.userModel.findByIdAndUpdate({ userId}, userDto).exec();
+  update(userDto: UserDto, userId: string) {
+    return this.userModel.findByIdAndUpdate(userId, userDto).exec();
   }
 }
