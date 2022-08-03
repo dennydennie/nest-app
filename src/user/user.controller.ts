@@ -4,11 +4,8 @@ import {
   Delete,
   Get,
   Param,
-  ParseIntPipe,
-  ParseUUIDPipe,
   Patch,
   Post,
-  Req,
 } from '@nestjs/common';
 import { UserDto } from './dto/user.dto';
 import { UserService } from './user.service';

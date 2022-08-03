@@ -20,10 +20,10 @@ export class UserService {
     return this.userModel.findById(userId).exec();
   }
 
-  delete(userId: string) {
+  async delete(userId: string) {
     return this.userModel.deleteOne({ userId }).exec();
   }
-  update(userDto: UserDto, userId: string) {
+  async update(userDto: UserDto, userId: string) {
     return this.userModel.updateOne({ userId }, userDto).exec();
   }
 }
