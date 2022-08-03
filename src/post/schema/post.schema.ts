@@ -9,9 +9,9 @@ export class Post {
   title: string;
   @Prop({ required: true })
   description: string;
-  @Prop({ required: true })
+  @Prop()
   created: string;
-  @Prop({ required: true })
+  @Prop()
   updated: string;
 }
 

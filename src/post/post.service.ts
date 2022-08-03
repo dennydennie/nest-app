@@ -18,7 +18,7 @@ export class PostService {
   }
 
   async deletePost(postId: string) {
-    return this.postModel.deleteOne({ postId }).exec();
+    return this.postModel.findByIdAndRemove(postId).exec();
   }
 
   async getAllPosts(): Promise<Post[]> {
@@ -26,6 +26,6 @@ export class PostService {
   }
 
   async getPostById(postId: string) {
-    return this.postModel.findOne({ postId }).exec();
+    return this.postModel.findById(postId).exec();
   }
 }
